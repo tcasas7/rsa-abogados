@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+@layer base {
+  html,
+body {
+  font-family: 'Lora', serif;
+  overflow-x: hidden;
+}
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html, body {
+  background-color: white !important;
+  color: black !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  html, body {
+    background-color: white !important;
+    color: black !important;
+  }
+}
+
+[class*="dark"] {
+  background-color: white !important;
+  color: black !important;
+}
