@@ -7,33 +7,33 @@ export const Contacto = () => {
 
   return (
     <>
-      {/* Bloque de imágenes fuera del section contacto */}
-<div className="flex overflow-x-auto md:flex-row w-full no-scrollbar">
-  <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
-    <img
-      src="/img/mockup-hoja.png"
-      alt="Mockup hoja"
-      className="w-full h-full object-cover"
-    />
-  </div>
-  <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
-    <img
-      src="/img/mockup-compu.png"
-      alt="Mockup computadora"
-      className="w-full h-full object-cover"
-    />
-  </div>
-  <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
-    <img
-      src="/img/mockup-sello.png"
-      alt="Mockup sello"
-      className="w-full h-full object-cover"
-    />
-  </div>
-</div>
+      
+      <div className="flex overflow-x-auto md:flex-row w-full no-scrollbar">
+        <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
+          <img
+            src="/img/mockup-hoja.png"
+            alt="Mockup hoja"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
+          <img
+            src="/img/mockup-compu.png"
+            alt="Mockup computadora"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="flex-none w-[300px] h-[200px] md:flex-1 md:h-[400px]">
+          <img
+            src="/img/mockup-sello.png"
+            alt="Mockup sello"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
 
       {/* Section contacto */}
-      <section id="contacto" className="bg-[#1b263b] py-24 w-full">
+      <section id="contacto" className="relative bg-[#1b263b] py-24 w-full">
         <div className="max-w-3xl mx-auto px-6 mt-20">
           <h2 className="text-4xl sm:text-5xl text-[#e0e1dd] font-lora font-semibold text-center mb-7">
             ¡Contactanos!
@@ -42,7 +42,7 @@ export const Contacto = () => {
             ¿Tenés alguna consulta?
           </h3>
           <p className="text-[#e0e1dd] font-lora font-medium text-center mb-12 text-base leading-relaxed">
-            Estamos para ayudarte. Completá el formulario y te responderemos a la brevedad
+            Estamos para ayudarte. Completá el formulario y te responderemos a la brevedad.
           </p>
 
           <form
@@ -84,15 +84,18 @@ export const Contacto = () => {
               required
             ></textarea>
 
-            {/* Honeypot para evitar spam */}
+      
             <input type="text" name="_honey" style={{ display: "none" }} />
 
-            {/* Redirección al enviar */}
+           
             <input
               type="hidden"
               name="_next"
-              value="https://rsa-asociados.com/gracias"
+              value="/gracias"
             />
+
+            {/* Evitar captcha de FormSubmit */}
+            <input type="hidden" name="_captcha" value="false" />
 
             <div className="flex items-start gap-2">
               <input
