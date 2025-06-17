@@ -91,7 +91,7 @@ export const Contacto = () => {
             <input
               type="hidden"
               name="_next"
-              value="/gracias"
+              value="https://estudiorsa.com.ar/gracias"
             />
 
             {/* Evitar captcha de FormSubmit */}
