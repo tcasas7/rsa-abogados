@@ -14,7 +14,7 @@ export const Contacto = () => {
     const formData = new FormData(formRef.current);
 
     try {
-      await fetch("https://formsubmit.co/tomas.casas2001@gmail.com", {
+      await fetch("https://formsubmit.co/contacto@estudiorsa.com.ar ", {
         method: "POST",
         body: formData,
       });
